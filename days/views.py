@@ -22,7 +22,6 @@ def dynamic_days(request, day):
     day_data = days.get(day)
     # -> dares 14 -> render template + template filters + template tags
 
-    # DTL DJango template language
     context = {
         'day': day,
         'day_data': day_data
