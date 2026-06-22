@@ -1,0 +1,28 @@
+{% extends 'layout_days.html' %}
+
+{% block page-title %}
+    day & day data
+{% endblock %}
+
+{% block content %}
+    {% include 'days/partials/header.html' with active_page='day-info' %}
+    <h1>
+        {{ day | lower }}
+    </h1>
+    {# Django template tags - if #}
+    {% if data %}
+        <h2>
+            {{ day_data | title }}
+        </h2>
+    {% else %}
+        <p> there is no data </p>
+    {% endif %}
+    <a href="/"> main page </a>
+{% endblock %}
+
+{% block footer-references %}
+    <script>
+        console.log("Hello from script page day info")
+    </script>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'layout_days.html' %}
+{% block page-title %}
+	list days
+{% endblock %}
+
+{% block content %}
+    {% include 'days/partials/header.html' with active_page='days-list' %}
+    <ul>
+        {% for day in days %}
+        <li>
+            <a href="{% url 'dynamic_days' day  %}">{{ day | title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">main page</a>
+{% endblock %}
