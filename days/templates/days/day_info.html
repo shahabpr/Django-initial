@@ -7,19 +7,18 @@
 {% block content %}
     {% include 'days/partials/header.html' with active_page='day-info' %}
     <h1>
-        {{ day | lower }}
+        {{ day | upper }}
     </h1>
     {# Django template tags - if #}
-    {% if data %}
+    {% if day_data %}
         <h2>
             {{ day_data | title }}
         </h2>
     {% else %}
         <p> there is no data </p>
     {% endif %}
-    <a href="/"> main page </a>
+    <a href="/"> main page link </a>
 {% endblock %}
-
 {% block footer-references %}
     <script>
         console.log("Hello from script page day info")

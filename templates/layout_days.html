@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block page-title %}
-        default
-    {% endblock %}
+    <title>
+        {% block page-title %}
+            default
+        {% endblock %}
     </title>
-
     {% block head-references %}
 
     {% endblock %}
-
 </head>
 <body>
 <div style="border: 1px solid blueviolet; margin: 15px; padding: 15px">
@@ -19,10 +18,8 @@
         <p>default content</p>
     {% endblock %}
 </div>
-
 {% block footer-references %}
 
 {% endblock %}
-
 </body>
 </html>
